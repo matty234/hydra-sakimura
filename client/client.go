@@ -293,6 +293,7 @@ func (c *Client) GetResponseModes() []fosite.ResponseModeType {
 		fosite.ResponseModeFormPost,
 		fosite.ResponseModeQuery,
 		fosite.ResponseModeFragment,
+		fosite.ResponseModeType("web_message"),
 	}
 }
 

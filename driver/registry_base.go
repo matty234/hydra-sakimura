@@ -322,6 +322,8 @@ func (m *RegistryBase) OAuth2Provider() fosite.OAuth2Provider {
 			Issuer:      m.C.IssuerURL().String(),
 		}
 
+		fc.ResponseModeHandlerExtension = &WebMessageResponse{}
+
 		var coreStrategy foauth2.CoreStrategy
 		hmacStrategy := m.OAuth2HMACStrategy()
 
